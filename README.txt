@@ -1,78 +1,56 @@
-# Prison Escape Game (C)
+Prison Escape Game (C)
 
-A grid-based stealth game written in **C**, where the player tries to escape a prison without being caught by guards. The project is developed as a console application and focuses on matrix operations, line-of-sight logic, and basic game mechanics.
+A grid-based stealth game written in C, where the player tries to escape a prison without being caught by guards. The project is a console application and focuses on matrix operations, line-of-sight logic, and basic game mechanics.
 
-## Project Description
+Project Description
 
-The player (`O`) navigates a **20x20** matrix to reach the exit (`C`) while avoiding guards (`G`). Each guard has a defined **vision direction and range**, and if the player enters a guard’s line of sight without a wall (`#`) blocking it, the game is lost.
+The player (O) moves inside a 20x20 matrix to reach the exit (C) while avoiding guards (G).
+Each guard has a fixed vision direction and range. If the player enters a guard’s line of sight without a wall (#) blocking it, the game is lost.
 
-The core of the project is the **line-of-sight (LOS) algorithm**, which checks whether a guard can see the player.
+The main focus of the project is the line-of-sight (LOS) algorithm, which determines whether a guard can see the player.
 
-## Symbols Used
+Symbols Used
+Symbol	Meaning
+O	Player
+G	Guard
+C	Exit
+#	Wall
+.	Walkable floor
+> < ^ v	Guard vision direction
+Game Mechanics
 
-| Symbol    | Meaning                |
-| --------- | ---------------------- |
-| `O`       | Player                 |
-| `G`       | Guard                  |
-| `C`       | Exit                   |
-| `#`       | Wall                   |
-| `.`       | Walkable floor         |
-| `> < ^ v` | Guard vision direction |
+The player moves using arrow keys.
 
-## Game Mechanics
+Guards are static and look in a single fixed direction.
 
-* The player moves using arrow keys.
-* Guards patrol or stay fixed depending on the level.
-* If a guard sees the player directly and no wall blocks the view, the player is caught.
-* Reaching the exit without being detected wins the game.
+If a guard sees the player directly and no wall blocks the view, the player is caught.
 
-## Levels
+Reaching the exit without being detected wins the game.
 
-### Level 1
+The game consists of one single level.
 
-* Static guards
-* Guards only look in a single fixed direction
+Technologies Used
 
-### Level 2
+C (Standard C Library)
 
-* Patrolling guards that move along a predefined path
+Console-based rendering
 
-### Level 3
+2D arrays (matrix-based map)
 
-* Guards have **cone-shaped vision** (including diagonal vision)
-
-### Advanced (Optional)
-
-* Keys (`K`) and locked doors (`D`)
-
-## Technologies Used
-
-* C (Standard C Library)
-* Console-based rendering
-* 2D arrays (matrix-based map)
-
-## How to Compile and Run
-
-```bash
-gcc main.c -o prison_escape
+How to Compile and Run
+gcc real_oyun.c -o prison_escape
 ./prison_escape
-```
 
-## Learning Outcomes
+Learning Outcomes
 
-* Working with 2D arrays in C
-* Implementing line-of-sight algorithms
-* Game logic and state management
-* Modular function design
+Working with 2D arrays in C
 
-## Screenshot
+Implementing a line-of-sight algorithm
 
-![Game Screenshot](screenshot.png)
+Basic game logic and state management
 
-## Author
+Modular function design
 
-**Enes Kılıç**
+Author
 
----
-
-Feel free to fork the project or suggest improvements.
+Enes Kılıç
